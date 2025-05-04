@@ -3,13 +3,15 @@ package org.data1700.assigment2.repository;
 import org.data1700.assigment2.models.Account;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class AccountRepository {
 
-    public List<Account> getAccounts{
+    public List<Account> getAccounts(){
+        List<Account> account = new ArrayList<>();
         String sql = "";
-        return
+        return account;
     }
 }
