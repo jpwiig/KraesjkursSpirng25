@@ -1,0 +1,15 @@
+package org.data1700.assigment2.repository;
+
+import org.data1700.assigment2.models.Account;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public class AccountRepository {
+
+    public List<Account> getAccounts{
+        String sql = "";
+        return
+    }
+}

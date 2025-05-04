@@ -1,0 +1,1 @@
+Her lagrer du alt logikkk som skal til databasen din og alt som har med databehandling å gjøre.
