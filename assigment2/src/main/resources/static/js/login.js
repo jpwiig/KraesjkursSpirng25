@@ -10,6 +10,7 @@ page.
 incorrect."
      */
     let user = {
+        //todo: live demo on how to get data from here
         username: "bob",
         password: "alice"
 
