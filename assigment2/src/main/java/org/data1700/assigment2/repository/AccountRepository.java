@@ -9,9 +9,16 @@ import java.util.List;
 @Repository
 public class AccountRepository {
 
+    public void load(){
+        //as no db is added:
+
+    }
     public List<Account> getAccounts(){
         List<Account> account = new ArrayList<>();
         String sql = "";
         return account;
+    }
+    public boolean createAccount(){
+
     }
 }
