@@ -8,4 +8,16 @@ private long id;
 private String username;
 @Pattern(regexp = "^[A-Za-z0-9]{20,100}$",message = "Validation is wrong for password")
 private String password;
+public Account(String username, String password){
+    this.username = username;
+    this.password = password;
+
+}
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

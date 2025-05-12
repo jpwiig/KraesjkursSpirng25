@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="car-brand">Write in car brand:</label>
+<input type="text" id="car-brand">
+<br>
+<label for="car-model"> Write in a car model: </label>
+<input type="text" id="car-model">
+<br>
+<label for="reg-plate">Registration plate: </label>
+<input type="text" id="reg-plate">
+<button onclick="newCar()">submit!</button>
+
+<table id="car-table">
+    <thead>
+    <tr>
+        <th>Car Brand</th>
+        <th>Car Model</th>
+        <th>Car Registration Plate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Toyota</td>
+        <td>Corolla</td>
+        <td>AZ 19824</td>
+    </tr>
+    <tr>
+        <td>Volvo</td>
+        <td>ex30</td>
+        <td>DA 13337</td>
+    </tr>
+    <tr>
+    </tbody>
+    </table>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("Ready!")
+
+        //kunne ha vært en funksjon
+        //finner riktig bil tabell
+        let carTable = document.getElementById("car-table")
+        let carTableRow = carTable.getElementsByTagName("tr")
+
+        console.log(carTableRow)
+        for (let i = 0; i < carTableRow.length; i++){
+            if (i % 2 === 0){
+                carTableRow[i].className = "odd-row"
+                console.log("AHA")
+            }
+        }
+
+    })
+
+function newCar(){
+    let newCar={
+        carBrand : document.getElementById("car-brand").value,
+        carModel : document.getElementById("car-model").value,
+        regPlate : document.getElementById("reg-plate").value
+    }
+    console.log(newCar)
+}
+
+function print(newcar){
+        const ut = `<tr><td>${newcar.carBrand}</td><td>${newcar.carModel}</td><td>${newCar.regPlate}</td>`
+        document.getElementById("car-table").append(ut)
+}
+</script>
+</html>
