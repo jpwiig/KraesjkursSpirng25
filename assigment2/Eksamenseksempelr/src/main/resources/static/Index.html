@@ -35,8 +35,9 @@
         <td>DA 13337</td>
     </tr>
     <tr>
+    </tr>
     </tbody>
-    </table>
+</table>
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -63,12 +64,15 @@ function newCar(){
         carModel : document.getElementById("car-model").value,
         regPlate : document.getElementById("reg-plate").value
     }
+    print(newCar)
     console.log(newCar)
 }
 
 function print(newcar){
-        const ut = `<tr><td>${newcar.carBrand}</td><td>${newcar.carModel}</td><td>${newCar.regPlate}</td>`
-        document.getElementById("car-table").append(ut)
+        let ut =`<tr><td>${newcar.carBrand}</td><td>${newcar.carModel}</td><td>${newcar.regPlate}</td>`
+
+    console.log(ut)
+    document.getElementById("car-table").getElementsByTagName("tbody")[0].insertRow(-1).innerHTML = ut
 }
 </script>
 </html>

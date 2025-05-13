@@ -1,6 +1,7 @@
 package org.data1700.assigment2.controller;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.ReportAsSingleViolation;
 import org.data1700.assigment2.models.Account;
 import org.data1700.assigment2.repository.AccountRepository;
@@ -12,7 +13,7 @@ import java.net.http.HttpResponse;
 @RequestMapping("/api/v1/Accounts")
 public class AccountController {
 private final AccountRepository rep;
-public AccountController(AccountRepository rep){
+public AccountController(AccountRepository rep,){
     this.rep = rep;
 }
 
@@ -22,7 +23,8 @@ public String helloWorld(){
     }
 
     @PostMapping("/validate")
-    public boolean validate(@RequestBody Account account){
+    public boolean validate(@RequestBody Account account, HttpSession session) {
+    //session.setAttribute("account", true);
     boolean ok = rep.validate(account);
     return ok;
 
